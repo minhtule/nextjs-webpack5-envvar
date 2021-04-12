@@ -36,4 +36,19 @@ file).
   + With the Webpack cache, run `yarn build` again
   + Inspect `.next/server/pages/index.js`, the 3 envvars are still not replaced as expected.
 
-If we delete `.next/cache` directory and rerun `yarn build`, the envvars are replaced correctly.
+- If we delete `.next/cache` directory and rerun `yarn build`, the envvars are replaced correctly.
+    ```js
+    function Home() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          children: "Hi"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
+          children: "abc"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
+          children: "def"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
+          children: "ghi"
+        })]
+      });
+    }
+    ```
