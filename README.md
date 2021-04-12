@@ -12,8 +12,8 @@ file).
     - The Next.js public envvar like `process.env.NEXT_PUBLIC_VAR_1` are not replaced. This is
     expected because they are not set in `.env` file (commented out).
 - Now we can reproduce the issue with the problematic Webpack cache
-- Commented out the 3 envvar in `.env`
-- With the Webpack cache, run `yarn build` again
-- Inspect `.next/server/pages/index.js`, the 3 envvars are still not replaced as expected.
+  + Commented out the 3 envvar in `.env`
+  + With the Webpack cache, run `yarn build` again
+  + Inspect `.next/server/pages/index.js`, the 3 envvars are still not replaced as expected.
 
 If we delete `.next/cache` directory and rerun `yarn build`, the envvars are replaced correctly.
